@@ -782,6 +782,7 @@ void mParticle::UpdateParticles(int iStep,
                         kernel.omega[idir] = 0.0;
                     }
                     else if (kernel.RL[idir] == 1) {
+                        kernel.omega[idir] = kernel.omega_old[idir];
                     }
                     else if (kernel.RL[idir] == 2) {
                         if(!ParticleProperties::Uhlmann){
